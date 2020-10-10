@@ -1,0 +1,29 @@
+/* color pallette */
+$primary-color: #ffcbcb;
+$secondary-color: #70adb5;
+$third-color: #407088;
+$fourth-color: #132743;
+$link-hover-color: rgba(238, 238, 238, 0.541);
+
+// fonts
+$font-size: 1rem;
+$body-font-size: 1rem;
+$font-style: normal;
+$font-weight: normal;
+$font-color: $fourth-color;
+$font-family: 'Roboto', sans-serif;
+$line-height: 1.6;
+
+$h1: 4rem;
+$h2: 3rem;
+$h3: 2rem;
+$h4: 1.75rem;
+$h5: 1.5rem;
+
+// spacing
+$padding: 1rem;
+$margins: 1rem;
+$content-padding: 60px 0;
+
+// rounded corners
+$border-radius: 10%;

@@ -1,0 +1,117 @@
+// media queries
+$mobile: 320;
+$tablet: 768;
+$desktop: 1280;
+
+@mixin mobile {
+  @media only screen and (min-width: $mobile * 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop * 1px) {
+    @content;
+  }
+}
+
+// paddings and margins
+@mixin flatten {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin space-out {
+    margin: $margins;
+    padding: $padding;
+}
+
+// quickly centre a block element without having to worry about if there is any top or bottom margin already applied.
+@mixin push-auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+
+    padding {
+        left: auto;
+        right: auto;
+    }
+}
+
+// same as container in bootstrap
+@mixin wrapper {
+    margin: 0 auto;
+    width: 80%;
+    
+}
+
+// define width and height in one go.
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+  }
+
+//   flex box stuff
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-column {
+    @include flex-center;
+    flex-direction: column;
+    }
+
+@mixin flex-center-vert {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@mixin flex-center-horiz {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+// add cover background
+@mixin cover-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+// add gradient of color template
+@mixin add-gradient {
+    background: $primary-color;
+    background: -moz-linear-gradient(90deg, $primary-color 0%, $secondary-color 79%, $third-color 100%);
+    background: -webkit-linear-gradient(90deg, $primary-color 0%, $secondary-color 79%, $third-color 100%);
+    background: linear-gradient(90deg, $primary-color 0%, $secondary-color 79%, $third-color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffcbcb",endColorstr="#407088",GradientType=1);
+}
+
+// add box shadow at bottom
+@mixin box-shadow-bottom{
+    -webkit-box-shadow: 0px 23px 28px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 23px 28px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 23px 28px -8px rgba(0,0,0,0.75);
+}
+
