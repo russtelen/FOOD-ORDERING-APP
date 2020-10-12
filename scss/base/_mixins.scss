@@ -48,8 +48,17 @@ $desktop: 1280;
 // same as container in bootstrap
 @mixin wrapper {
     margin: 0 auto;
-    width: 80%;
-    
+    width: 80%; 
+}
+
+@mixin wrapper-tablet {
+  margin: 0 auto;
+  width: 95%; 
+}
+
+@mixin wrapper-desktop {
+  margin: 0 auto;
+  width: 50%; 
 }
 
 // define width and height in one go.

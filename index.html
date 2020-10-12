@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Order App</title>
     <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -12,9 +15,10 @@
     </header>
 
     <main>
+        <div class="row-1">
             <div class="sub-menu" id="appetizer">
-                <p>Please select one item from the Appetizer Menu</p>
-                <ol>
+                <p>Choose an Appetizer</p>
+                <ol class="food-list">
                     <li class="appetizer-list">** No Selection ** $0.00</li>
                     <li class="appetizer-list">Fried Plantain Chips $7.50</li>
                     <li class="appetizer-list">Nachos with Salsa $4.99</li>
@@ -26,8 +30,8 @@
             </div>
         
             <div id="entree" class="sub-menu">
-                <p>Please select one item from the Entree Menu</p>
-                <ol>
+                <p>Choose an Entree</p>
+                <ol class="food-list">
                     <li class="entree-list">** No Selection ** $0.00</li>
                     <li class="entree-list">Rib-Steak $15.95</li>
                     <li class="entree-list">Fetuccini Alfredo $11.25</li>
@@ -38,11 +42,12 @@
                 <p class="enter">Please Enter your selection #</p>
                 <input type="text" class="order-no-2" value="1">
             </div>
-            </div>
+        </div>
         
+        <div class="row-2">
             <div class="sub-menu" id="dessert">
-                <p>Please select one item from the Dessert Menu</p>
-                <ol>
+                <p>Choose a a Dessert</p>
+                <ol class="food-list">
                     <li class="dessert-list">** No Selection ** $0.00</li>
                     <li class="dessert-list">Ice Cream Sundae $2.95</li>
                     <li class="dessert-list">Cheesecake $5.00</li>
@@ -54,8 +59,8 @@
             </div>
         
             <div id="beverages" class="sub-menu">
-                <p>Please select one item from the Beverage Menu</p>
-                <ol>
+                <p>Choose a beverage</p>
+                <ol class="food-list">
                     <li class="beverage-list">** No Selection ** $0.00</li>
                     <li class="beverage-list">Water $0.00</li>
                     <li class="beverage-list">Juice $2.00</li>
@@ -67,7 +72,9 @@
                 <p class="enter">Please Enter your selection #</p>
                 <input type="text" class="order-no-4" value="1">
             </div>
-            </div>
+        </div>
+        
+            
         
             <div id="button">
                 <button id="complete-btn">Complete Order</button>

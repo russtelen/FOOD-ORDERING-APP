@@ -1,0 +1,110 @@
+// General
+body {
+    background-color: white;
+    font-family: $font-family;
+}
+
+// Header
+header {
+    h1 {
+        padding: $padding;
+        font-size: $h2;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $primary-color;
+        color: $fourth-color;
+    }
+}
+
+// Main
+main {
+    @include mobile{
+        @include wrapper;
+        input[type="text"], textarea {
+            background-color : $fourth-color; 
+            text-align: center;
+            width: 40px;
+        }
+        .sub-menu {
+            @include flex-center-column;
+            // @include box-shadow-bottom;
+            margin: $margins;
+            // border: 1px solid $third-color;
+            // border-bottom-left-radius: 10%;
+            // border-bottom-right-radius: 10%;
+
+            p:first-child {
+                text-align: center;
+                background-color: $secondary-color;
+                padding: 1rem 4rem;
+                color: $fourth-color;
+            }
+
+            .food-list {
+                text-align: center;
+                font-size: 0.75rem;
+                margin: $margins;
+            }
+
+           .enter {
+                text-align: center;
+                font-size: 0.9rem;
+                margin-bottom: 5%;
+            }
+            
+            li {
+                list-style-type: decimal;
+            }
+        }
+
+        #button {
+            @include wrapper;
+            text-align: center;
+            button {
+                background-color: $third-color;
+                border-radius: $border-radius; 
+                color: $fourth-color;
+            }
+        }
+
+        .order-output {
+            @include space-out;
+
+            h3 {
+                text-align: center;
+                margin: $margins;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            h4 {
+                margin: $margins;
+                text-align: center;
+            }
+        }
+    }
+
+    @include tablet {
+        @include wrapper-tablet;
+        .row-1 {
+            @include flex-center-horiz;
+        }
+
+        .row-2 {
+            @include flex-center-horiz;
+        }
+    }
+
+    @include desktop {
+        @include wrapper-desktop;
+        .sub-menu {
+            li {
+                margin: $margins;
+            }
+        }
+    }
+
+    
+}
