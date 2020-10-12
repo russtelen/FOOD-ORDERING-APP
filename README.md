@@ -5,3 +5,6 @@
 
 ## Try the app here:
 [Food Ordering App](https://food-ordering-app-russtelen.netlify.app/)
+
+## App Preview
+![Food Ordering App Preview](/assets/images/food-order-preview.png)
