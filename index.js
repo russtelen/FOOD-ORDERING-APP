@@ -1,18 +1,18 @@
 // appetizer
 var appetizerDesc = ["**No selection**", "Deep Fried Calamari", "Sour du Jour", "Garden Salad", "Garlic Bread"];
-var appetizerPrice = [0, 7.50, 4.99, 3.99, 4.50];
+var appetizerPrice = [0.00, 7.50, 4.99, 3.99, 4.50];
 
 // entrees
 var entreeDesc = ["**No selection**", "Rib Steak", "Fettuccini Alfredo", "Pan-fried Sole", "Mediterranean Platter", "Vegetarion Lasagna"];
-var entreePrice = [0, 15.95, 11.25, 17.95, 13.50, 9];
+var entreePrice = [0.00, 15.95, 11.25, 17.95, 13.50, 9];
 
 // desserts
 var dessertDesc = ["**No selection**", "Ice Cream Sundae", "Cheesecake", "Chocolate Truffle Cake", "Raspberry Mousse"];
-var dessertPrice = [0, 2.95, 5, 6, 4.50];
+var dessertPrice = [0.00, 2.95, 5, 6, 4.50];
 
 // beverage
 var beverageDesc = ["**No selection**", "Water", "Juice", "Pop", "Milk", "Coffee", "Tea"];
-var beveragePrice = [0, 0, 2, 2, 2, 1.75, 1.75];
+var beveragePrice = [0.00, 0, 2, 2, 2, 1.75, 1.75];
 
 
 // total bill variable and initialize
@@ -110,6 +110,33 @@ function reset() {
     totalBill = 0;
 }
 
+// display items and prices from array to each submenu
+function displayMenu() {
+    var appetizerList = $(".appetizer-list");
+    var entreeList    = $(".entree-list");
+    var dessertList    = $(".dessert-list");
+    var beverageList    = $(".beverage-list");
+
+    for(var i = 0; i < appetizerList.length; i++) {
+        appetizerList[i].innerHTML = `${appetizerDesc[i]} $${appetizerPrice[i].toFixed(2)}`;
+    }
+
+    for(var i = 0; i < entreeList.length; i++) {
+        entreeList[i].innerHTML = `${entreeDesc[i]} $${entreePrice[i].toFixed(2)}`;
+    }
+
+    for(var i = 0; i < dessertList.length; i++) {
+        dessertList[i].innerHTML = `${dessertDesc[i]} $${dessertPrice[i].toFixed(2)}`;
+    }
+
+    for(var i = 0; i < beverageList.length; i++) {
+        beverageList[i].innerHTML = `${beverageDesc[i]} $${beveragePrice[i].toFixed(2)}`;
+    }
+   
+}
+
+// call displayMenu function
+displayMenu();
 
 // event listeners
 completeButton.addEventListener("click", () => {
@@ -120,3 +147,4 @@ completeButton.addEventListener("click", () => {
 clearButton.addEventListener("click", () => {
     reset();
 });
+
